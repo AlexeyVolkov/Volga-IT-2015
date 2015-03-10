@@ -43,6 +43,7 @@ body {
 	line-height: @height;
 
 	button{
+		background-color: white;
 		border-color: #e6e6e6 !important;
 		color: #e6e6e6;
 	}
@@ -73,7 +74,6 @@ body {
 .about{
 	@height: 38px;
 	margin-top: 60px;
-	margin-bottom: 50px;
 	text-align: center;
 
 	border-bottom: 1px solid #d8d8d8;
@@ -116,6 +116,36 @@ body {
 			height: 100%;
 
 			color: #6a6326;
+		}
+	}
+}
+.video{
+	height: 90px;
+	margin-top: 50px;
+
+	border-bottom: 1px solid #d8d8d8;
+	text-align: center;
+
+	button{
+		@height: 40px;
+		height: @height;
+		line-height: @height;
+		padding: 0 25px;
+		
+		@color: #98925e;
+		background-color: @color;
+		border: 1px solid #757042;
+		border-radius: 5px;
+		color: white;
+		
+		&:hover, &:active, &:focus{			
+			color: white;
+		}
+		&:hover, &:focus{
+			background-color: darken(@color, 5%);
+		}
+		&:active{
+			background-color: darken(@color, 10%);
 		}
 	}
 }
