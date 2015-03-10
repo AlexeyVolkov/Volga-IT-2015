@@ -1,5 +1,45 @@
-@import "variables.less";
+@import (reference) "variables.less";
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: @footer-height;
 
-*{
-	background: @red;
+  background-color: #f8f8f8;
+}
+.header{
+	height: @header-height;
+
+	border-bottom: 1px solid #d8d8d8;
+	color: #4a4626;
+	@media (min-width: @screen-xs) {
+		@wh: 36px;
+		ul.navbar-right li{
+			margin: 5px;
+			margin-left: 0;
+		}
+		ul.navbar-right li a{
+			margin: 0;
+			padding: 0;
+			display: block;
+			background-color: white;
+			border: 1px solid #e3e3e3;
+			width: @wh;
+			height: @wh;
+			line-height: @wh;
+			border-radius: @wh;
+			text-align: center;
+			font-weight: bold;
+			font-size: 16px;
+		}
+	}
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: @footer-height;
 }
