@@ -2,5 +2,16 @@
 @import (reference) "less/variables.less";
 
 // Variables
+@background-color: white;
 @header-height: 50px;
 @footer-height: 70px;
+
+// Mixins
+.outline-none{
+  button, a{
+    outline: none !important;
+    &:hover, &:active, &:focus, &:visited{
+      outline: none !important;
+    }
+  }
+}

@@ -7,7 +7,8 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: @footer-height;
 
-  background-color: #f8f8f8;
+  background-color: @background-color;
+  .outline-none;
 }
 .header{
 	height: @header-height;
@@ -35,6 +36,19 @@ body {
 			font-size: 16px;
 		}
 	}
+}
+.middle{
+	@height: 130px;
+	height: @height;
+	line-height: @height;
+
+	button{
+		border-color: #e6e6e6 !important;
+		color: #e6e6e6;
+	}
+}
+.map{
+	background-color: red;
 }
 footer{
   position: absolute;
