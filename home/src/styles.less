@@ -84,6 +84,28 @@ body {
 					color 0.3s,
 					box-shadow 0.3s;
 	}
+	.modal{
+		//background-color: rgba(0, 0, 0, 0.5);
+		.modal-content{
+			border-radius: 3px;
+			border: 1px solid #ef9875;
+
+			.modal-header{
+				text-transform: capitalize;
+			}
+			.modal-body{
+				input{
+					@height: 50px;
+					width: 100%;
+					height: @height;
+					line-height: @height;
+
+					border-radius: 2px;
+					border: 1px solid #e2e2e2;
+				}
+			}
+		}
+	}
 }
 .map{
 	div.map-content{
