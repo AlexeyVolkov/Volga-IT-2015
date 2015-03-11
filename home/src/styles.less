@@ -86,21 +86,46 @@ body {
 	}
 }
 .map{
-	div.map-content{		
-		height: 330px;
-		border: 1px solid #d8d8d8;
-		background-color: grey;
+	div.map-content{
+		padding: 0;		
+		overflow: hidden;
+		@media (min-width: @screen-sm) {
+			height: 330px;	
+			border: 1px solid #d8d8d8;
+			position: relative;
+		}
+
+		#map{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			z-index: 0 !important;
+
+			ymaps{
+				
+				z-index: 0;
+			}
+		}
 	}
 	.jumbotron{
-		height: 160px;
-		margin-top: 50px;
+		height: 160px;		
 		overflow: hidden;
+		@media (min-width: @screen-sm) {
+			display: none;
+			margin-top: 50px;			
+			position: relative !important;
+			z-index: 2000 !important;
+			background-color: rgba(241,162,131, 0.8);
+		}
 
 		text-align: center;
-		background-color: #d8896a;
+		background-color: #f1a283;
 		color: white;
 		
 		.title{
+			@media (min-width: @screen-xs) {				
+				font-size: @font-size-h2;
+			}
 			font-size: @font-size-h3;
 		}
 		p{
@@ -203,6 +228,7 @@ body {
 }
 .orgs{
 	padding-top: 65px;
+	padding-bottom: 60px;
 
 	text-align: center;
 	background-color: #f8f8f8;
