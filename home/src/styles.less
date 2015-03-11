@@ -87,21 +87,123 @@ body {
 	.modal{
 		//background-color: rgba(0, 0, 0, 0.5);
 		.modal-content{
+			width: 475px;
+
 			border-radius: 3px;
 			border: 1px solid #ef9875;
 
 			.modal-header{
-				text-transform: capitalize;
+				padding: 0;
+				text-transform: uppercase;
+				border: none;
+			    padding-left: 30px;
+
+				button{
+					height: 30px;
+					width: 30px;
+					margin: 0;
+
+					color: #ef9875 !important;
+					border: 1px solid #ef9875 !important;
+					opacity: 1 !important;
+					transition: color 0.3s,
+								background-color 0.3s;
+
+					&:hover{
+						color: white !important;
+						background-color: #ef9875;
+						box-shadow: 0 1px 3px #d8d8d8;
+					}
+					&:active{
+						box-shadow: none;
+						background-color: darken(#ef9875, 5%);
+					}
+				}
+				h4{
+					padding-top: 25px;
+				}
 			}
 			.modal-body{
+			    padding-left: 30px;
+
 				input{
 					@height: 50px;
 					width: 100%;
 					height: @height;
 					line-height: @height;
 
-					border-radius: 2px;
+					border-radius: 2px !important;
 					border: 1px solid #e2e2e2;
+					border-top: none;
+					font-size: 16px;
+					box-shadow: none;
+
+					&:first-child{
+						border-top: 1px solid #e2e2e2;
+					}
+				}
+				p{
+					font-size: 16px;
+					margin: 0;
+					padding: 0;
+					padding-top: 20px;
+
+					line-height: normal;
+				}
+				button{
+					width: 245px;
+					height: 55px;
+					margin-top: 20px !important;
+
+					background-color: #ef9875;
+					color: white;
+					text-shadow: 1px 1px #e5704c;
+					text-transform: uppercase;
+					font-size: 15px;
+					border-color: #ef9875 !important;
+
+					&:hover{
+						box-shadow: 0 1px 7px black !important;
+						border-color: darken(#ef9875, 5%)!important;
+						background-color: darken(#ef9875, 5%);
+					}
+					&:active{
+						box-shadow: none !important;
+						border-color: darken(#ef9875, 10%)!important;
+					}
+				}
+			}
+			.modal-footer{
+				line-height: normal;
+				text-align: left;
+				font-size: 16px;
+
+				p{
+					display: inline;
+				}
+				a{
+					@color: #ef9875;
+					border-bottom: 1px dashed @color;
+					color: @color;
+					transition: padding 0.2s,
+								border-radius 0.3s,
+								color 0.3s,
+								background-color 0.3s,
+								box-shadow 0.3s;
+					&:hover{
+						padding: 4px 7px;
+						border-radius: 3px;
+						border: none;
+
+						color: white;
+						background-color: @color;
+						text-decoration: none;
+						box-shadow: 0 1px 3px #d8d8d8;
+					}
+					&:active{
+						box-shadow: none;
+						background-color: darken(@color, 5%);
+					}
 				}
 			}
 		}
