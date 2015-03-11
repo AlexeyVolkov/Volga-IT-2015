@@ -36,6 +36,15 @@ body {
 			font-size: 16px;
 		}
 	}
+	.navbar-collapse{
+		background-color: #f8f8f8;
+
+		li a{
+			&:hover, &:active{
+				background-color: #d8d8d8;
+			}
+		}
+	}
 }
 .middle{
 	@height: 130px;
@@ -213,6 +222,9 @@ body {
   .navbar-header span{
   	line-height: @footer-height;
   }
+  span.icon-bar{
+  	background-color: #f8f8f8 !important;
+  }
   @media (min-width: @screen-xs) {
 		ul.navbar-nav{
 			height: @footer-height;
@@ -264,6 +276,21 @@ body {
 			}
 			&:active{
 				box-shadow: inset 0 1px 3px black;
+			}
+		}
+	}
+	.navbar-collapse{
+		background-color: #303023;
+
+		li{
+			&:hover, &:active{
+				background-color: #d8d8d8;
+			}
+			a{
+				color: white;
+			}
+			a:hover, a:active{
+				color: #4a4626;
 			}
 		}
 	}
