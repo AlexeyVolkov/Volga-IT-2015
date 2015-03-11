@@ -150,9 +150,15 @@ body {
 	}
 }
 .orgs{
+	padding-top: 65px;
+
 	text-align: center;
 	background-color: #f8f8f8;
 
+	h1{
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
 	ul{
 		margin: 0;
 		padding: 0;
@@ -160,14 +166,29 @@ body {
 	}
 	li{
 		@height: 100px;
-		display: inline;
+		display: inline-block;
 		width: 220px;
 		height: @height;
+		@media (min-width: @screen-xs) {
+			margin-right: 20px;			
+		}
+		margin-bottom: 20px;
 
-		a{background: red;
+		a{
+			display: block;
 			width: 100%;
-			height: 100px;
+			height: @height;
 			line-height: @height;
+
+			background-color: white;
+			box-shadow: 0 1px 3px #d8d8d8;
+
+			&:hover{
+				box-shadow: 0 2px 6px darken(#d8d8d8, 5%);
+			}
+			&:active{
+				box-shadow: inset 0 2px 6px darken(#d8d8d8, 5%);
+			}
 		}
 	}
 }
