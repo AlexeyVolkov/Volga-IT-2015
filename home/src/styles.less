@@ -36,15 +36,17 @@ body {
 			font-size: 16px;
 		}
 	}
-	.navbar-collapse{
-		background-color: #f8f8f8;
+	@media (mac-width: @screen-xs) {
+		.navbar-collapse{
+			background-color: #f8f8f8;
 
-		li a{
-			&:hover, &:active{
-				background-color: #d8d8d8;
+			li a{
+				&:hover, &:active{
+					background-color: #d8d8d8;
+				}
 			}
 		}
-	}
+	}	
 }
 .middle{
 	@height: 130px;
@@ -208,6 +210,7 @@ body {
   height: @footer-height;
 
   background-color: #303023;
+  border: none !important;
   border-top: 1px solid #d8d8d8;
   color: white;
 
@@ -279,18 +282,20 @@ body {
 			}
 		}
 	}
-	.navbar-collapse{
-		background-color: #303023;
+	@media (max-width: @screen-xs) {
+		.navbar-collapse{
+			background-color: #303023;
 
-		li{
-			&:hover, &:active{
-				background-color: #d8d8d8;
-			}
-			a{
-				color: white;
-			}
-			a:hover, a:active{
-				color: #4a4626;
+			li{
+				&:hover, &:active{
+					background-color: #d8d8d8;
+				}
+				a{
+					color: white;
+				}
+				a:hover, a:active{
+					color: #4a4626;
+				}
 			}
 		}
 	}
