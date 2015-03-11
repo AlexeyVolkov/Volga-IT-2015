@@ -1,4 +1,5 @@
 @import (reference) "variables.less";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 html {
   position: relative;
   min-height: 100%;
@@ -9,13 +10,14 @@ body {
 
   background-color: @background-color;
   .outline-none;
+  font-family: 'Open Sans', sans-serif;
 }
 .header{
 	height: @header-height;
 
 	border-bottom: 1px solid #d8d8d8;
 	color: #4a4626;
-	@media (min-width: @screen-xs) {
+	@media (min-width: @screen-sm) {
 		#logo-min{
 			display: none;
 		}
@@ -62,7 +64,7 @@ body {
 			}
 		}
 	}
-	@media (max-width: @screen-xs) {
+	@media (max-width: @screen-sm) {
 		.navbar-collapse{
 			background-color: #f8f8f8;
 
@@ -242,7 +244,7 @@ body {
 			display: none;
 			margin-top: 50px;			
 			position: relative !important;
-			z-index: 2000 !important;
+			z-index: 20 !important;
 			background-color: rgba(241,162,131, 0.8);
 			border-radius: 4px;
 		}
@@ -430,6 +432,8 @@ body {
 	h1{
 		margin-top: 0;
 		margin-bottom: 20px;
+		font-size: 30px;
+		font-family: 'Open Sans', sans-serif;
 	}
 	ul{
 		margin: 0;
@@ -475,6 +479,7 @@ body {
   border: none !important;
   border-top: 1px solid #d8d8d8;
   color: white;
+  font-family: 'Open Sans', sans-serif;
 
   nav{
   	height: @footer-height;
@@ -490,7 +495,7 @@ body {
   span.icon-bar{
   	background-color: #f8f8f8 !important;
   }
-  @media (min-width: @screen-xs) {
+  @media (min-width: @screen-sm) {
 		ul.navbar-nav{
 			height: @footer-height;
 			line-height: @footer-height;
@@ -548,7 +553,7 @@ body {
 			}
 		}
 	}
-	@media (max-width: @screen-xs) {
+	@media (max-width: @screen-sm) {
 		.navbar-collapse{
 			background-color: #303023;
 
