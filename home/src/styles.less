@@ -110,12 +110,14 @@ body {
 	.jumbotron{
 		height: 160px;		
 		overflow: hidden;
+		border-radius: 0;
 		@media (min-width: @screen-sm) {
 			display: none;
 			margin-top: 50px;			
 			position: relative !important;
 			z-index: 2000 !important;
 			background-color: rgba(241,162,131, 0.8);
+			border-radius: 4px;
 		}
 
 		text-align: center;
@@ -253,8 +255,8 @@ body {
 	}
 }
 .video{
-	height: 90px;
-	margin-top: 50px;
+	padding-top: 50px;
+	padding-bottom: 40px;
 
 	border-bottom: 1px solid #d8d8d8;
 	text-align: center;
@@ -264,6 +266,7 @@ body {
 		height: @height;
 		line-height: @height;
 		padding: 0 25px;
+		margin-bottom: 20px;
 		
 		@color: #98925e;
 		background-color: @color;
@@ -285,6 +288,9 @@ body {
 		&:active{
 			background-color: darken(@hover-color, 10%);
 		}
+	}
+	.video{
+		display: none;
 	}
 }
 .orgs{
