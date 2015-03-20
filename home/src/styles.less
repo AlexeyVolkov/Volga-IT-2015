@@ -95,7 +95,9 @@ body{
 }
 .modal{
 	.modal-content{
-		width: 475px;
+		@media (min-width: @screen-sm) {
+			width: 475px;
+		}
 
 		border-radius: 3px;
 		border: 1px solid #ef9875;
@@ -193,6 +195,7 @@ body{
 					@color: #ef9875;
 					border-bottom: 1px dashed @color;
 					color: @color;
+					white-space: nowrap;
 					transition: padding 0.2s,
 								border-radius 0.3s,
 								color 0.3s,
