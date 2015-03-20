@@ -7,7 +7,7 @@
     %title Стачка
     -# Bootstrap
     %link(href="css/bootstrap.min.css" rel="stylesheet")
-    -# Costum style
+    -# Costume style
     %link(href="css/styles.css" rel="stylesheet")
     -# IE
     /
@@ -67,8 +67,115 @@
                 Уже зарегистрировались?
               %a(href="#")
                 Войти в кабинет
-
-
-
-
+    .container-fluid
+      .row.map
+        .col-xs-12.col-lg-10.col-lg-offset-1.map-content
+          .hidden-xs#map
+          .jumbotron.col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+            %span.title
+              Регистрация на Стачку 2014 открыта!
+            %p
+              %strong
+                11-12 апреля,
+              Ульяновск, Ленинский Мемориал
+      .row.about
+        .col-xs-12
+          %h1 Что такое Стачка?
+          .col-xs-12.links
+            .icon-link
+              .icon
+                %img{:alt => "pdf", :src => "images/pdf.png"}
+              .link
+                %a{:href => "for-participants.pdf", :target => "_blank"} Для участников
+            .icon-link
+              .icon
+                %img{:alt => "pdf", :src => "images/pdf.png"}
+              .link
+                %a{:href => "for-lectors.pdf", :target => "_blank"} Для докладчиков (RU)
+            .icon-link
+              .icon
+                %img{:alt => "pdf", :src => "images/pdf.png"}
+              .link
+                %a{:href => "for-speakers.pdf", :target => "_blank"} For speakers (EN)
+            .icon-link
+              .icon
+                %img{:alt => "pdf", :src => "images/pdf.png"}
+              .dropdown
+                %button#dropdownMenu1.btn.btn-default.dropdown-toggle{"aria-expanded" => "true", "data-toggle" => "dropdown", :type => "button"} Для спонсоров
+                %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", :role => "menu"}
+                  %li{:role => "presentation"}
+                    %a{:href => "for-our-sponsors.pdf", :role => "menuitem", :tabindex => "-1", :target => "_blank"} Спонсорам из Ульяновска
+                  %li{:role => "presentation"}
+                    %a{:href => "for-sponsors.pdf", :role => "menuitem", :tabindex => "-1", :target => "_blank"} Спонсорам из других регионов
+      .row.video
+        .col-xs-12.col-md-8.col-md-offset-2
+          %button#open-video.btn.btn-default Видео: «Стачка 2013: Как это было?»
+          #collapseExample.video.embed-responsive.embed-responsive-16by9
+            %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/bt-Xy0F0Fds"}
+      .row.orgs
+        .col-xs-12.col-md-8.col-md-offset-2
+          %h1 Организаторы
+          %ul
+            %li
+              %a{:href => "http://itc73.ru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org1.jpg"}/
+            %li
+              %a{:href => "http://mstagency.ru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org2.jpg"}/
+            %li
+              %a{:href => "http://www.simtech.ru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org3.jpg"}/
+            %li
+              %a{:href => "#kaydzen", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org4.jpg"}/
+            %li
+              %a{:href => "http://www.simbirsoft.com/ruru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org5.jpg"}/
+            %li
+              %a{:href => "http://php73.ru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org6.jpg"}/
+            %li
+              %a{:href => "http://itmcompany.ru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org7.jpg"}/
+            %li
+              %a{:href => "http://creater.ru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org8.jpg"}/
+            %li
+              %a{:href => "https://platidoma.ru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org9.jpg"}/
+            %li
+              %a{:href => "http://interra-group.ru/", :target => "_blank"}
+                %img{:alt => "Org", :src => "images/org10.jpg"}/
+      .row.footer
+        %nav.navbar.navbar-default.navbar-static-bottom
+          .container
+            .navbar-header
+              %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              %span © Стачка 2014
+            #bs-example-navbar-collapse-2.navbar-collapse.collapse
+              %ul.nav.navbar-nav
+                %li
+                  %a{:href => "mailto:info@nastachku.ru"} info@nastachku.ru
+              %ul.nav.navbar-nav.navbar-right.hidden-xs
+                %li Поделиться с друзьями:
+                %li
+                  %a{:href => "www.facebook.com/nastachku", :target => "_blank"} f
+                %li
+                  %a{:href => "https://twitter.com/it73ru", :target => "_blank"} t
+                %li
+                  %a{:href => "http://vk.com/nastachku", :target => "_blank"} В
+                %li
+                  %a{:href => "#google-plus", :target => "_blank"} g+
+    
+    -# jQuery
+    %script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+    -# YaMaps
     %script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    -# Bootstrap
+    %script(src="js/bootstrap.min.js")
+    -# Costume compiled js
+    %script(src="js/compiled.min.js")
