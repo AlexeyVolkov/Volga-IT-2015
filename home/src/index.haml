@@ -44,29 +44,29 @@
           %img.img-responsive(src="images/logo.png" alt="Logo")
         .col-xs-3
           %button.btn.btn-default(type="button" data-toggle="modal" data-target="#myModal") Зарегистрироваться
-      -# Modal frame
-      .modal.fade(id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
-        .modal-dialog
-          .modal-content
-            .modal-header
-              %button.close(type="button" data-dismiss="modal" aria-label="Close")
-                %span(aria-hidden="true") &times;
-              %h4.modal-title#myModalLabel Регистрация
-            .modal-body
-              %form.form-horizontal#myForm
-                %input.form-control#inputName(type="name" placeholder="Мое имя" min="1" maxlength="64" required)
-                %input.form-control#inputSurname(type="text" placeholder="Фамилия" min="1" maxlength="64" required)
-                %input.form-control#inputEmail(type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required)
-                %input.form-control#inputPass1(type="password" placeholder="Придумайте пароль" maxlength="32" required)
-                %input.form-control#inputPass2(type="password" placeholder="Повторите пароль" maxlength="32" required)
-                %p
-                  Нажимая на кнопку «Зарегистрироваться», вы подтверждаете свое согласия с условиями предоставления услуг (пользовательское соглашение)
-                %button.btn.btn-primary(type="submit") Зарегистрироваться
-            .modal-footer
+    -# Modal frame
+    .modal.fade#myModal(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %button.close(type="button" data-dismiss="modal" aria-label="Close")
+              %span(aria-hidden="true") &times;
+            %h4.modal-title#myModalLabel Регистрация
+          .modal-body
+            %form.form-horizontal#myForm
+              %input.form-control#inputName(type="name" placeholder="Мое имя" min="1" maxlength="64" required)
+              %input.form-control#inputSurname(type="text" placeholder="Фамилия" min="1" maxlength="64" required)
+              %input.form-control#inputEmail(type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required)
+              %input.form-control#inputPass1(type="password" placeholder="Придумайте пароль" maxlength="32" required)
+              %input.form-control#inputPass2(type="password" placeholder="Повторите пароль" maxlength="32" required)
               %p
-                Уже зарегистрировались?
-              %a(href="#")
-                Войти в кабинет
+                Нажимая на кнопку «Зарегистрироваться», вы подтверждаете свое согласия с условиями предоставления услуг (пользовательское соглашение)
+              %button.btn.btn-primary(type="submit") Зарегистрироваться
+          .modal-footer
+            %p
+              Уже зарегистрировались?
+            %a(href="#")
+              Войти в кабинет
     .container-fluid
       .row.map
         .col-xs-12.col-lg-10.col-lg-offset-1.map-content
