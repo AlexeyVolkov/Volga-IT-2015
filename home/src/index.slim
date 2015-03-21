@@ -1,0 +1,182 @@
+doctype 5
+html(lang="en")
+	head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Стачка
+    / Bootstrap
+    link(href="css/bootstrap.min.css" rel="stylesheet")
+    / Costume style
+    link(href="css/styles.css" rel="stylesheet")
+    / IE
+    /[if lt IE 9]
+      script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+      script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+  body
+    nav.navbar.navbar-default.navbar-static-top.header
+      .container
+        .navbar-header
+          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+            span(class="sr-only") Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          img.img-responsive(src="images/logo-min.png" alt="Logo-min" id="logo-min")
+        .navbar-collapse.collapse(id="bs-example-navbar-collapse-1")
+          ul.nav.navbar-nav
+            li
+              a(href="http://2012.nastachku.ru/" target="_blank") 2012
+            li
+              a(href="http://2013.nastachku.ru/" target="_blank") 2013
+          ul.nav.navbar-nav.navbar-right
+            li.visible-xs-block
+              a(href="#" data-toggle="modal" data-target="#myModal")
+                | Зарегистрироваться
+            li
+              a(href="www.facebook.com/nastachku" target="_blank") f
+            li
+              a(href="https://twitter.com/it73ru" target="_blank") t
+            li
+              a(href="http://vk.com/nastachku" target="_blank") В
+    .container.hidden-xs.middle
+      .row
+        .col-xs-9
+          img.img-responsive(src="images/logo.png" alt="Logo")
+        .col-xs-3
+          button.btn.btn-default(type="button" data-toggle="modal" data-target="#myModal") Зарегистрироваться
+    / Modal frame
+    .modal.fade#myModal(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+            h4.modal-title#myModalLabel Регистрация
+          .modal-body
+            form.form-horizontal#myForm
+              input.form-control#inputName(type="name" placeholder="Мое имя" min="1" maxlength="64" required)
+              input.form-control#inputSurname(type="text" placeholder="Фамилия" min="1" maxlength="64" required)
+              input.form-control#inputEmail(type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required)
+              input.form-control#inputPass1(type="password" placeholder="Придумайте пароль" maxlength="32" required)
+              input.form-control#inputPass2(type="password" placeholder="Повторите пароль" maxlength="32" required)
+              p
+                | Нажимая на кнопку «Зарегистрироваться», вы подтверждаете свое согласия с условиями предоставления услуг (пользовательское соглашение)
+              button.btn.btn-primary(type="submit") Зарегистрироваться
+          .modal-footer
+            p
+              | Уже зарегистрировались?
+            a(href="#")
+              | Войти в кабинет
+    .container-fluid
+      .row.map
+        .col-xs-12.col-lg-10.col-lg-offset-1.map-content
+          .hidden-xs#map
+          .jumbotron.col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+            span.title
+              | Регистрация на Стачку 2014 открыта!
+            p
+              strong
+                | 11-12 апреля,
+              | Ульяновск, Ленинский Мемориал
+      .row.about
+        .col-xs-12
+          h1 Что такое Стачка?
+          .col-xs-12.links
+            .icon-link
+              .icon
+                img alt="pdf" src="images/pdf.png" 
+              .link
+                a href="for-participants.pdf" target="_blank"  Для участников
+            .icon-link
+              .icon
+                img alt="pdf" src="images/pdf.png" 
+              .link
+                a href="for-lectors.pdf" target="_blank"  Для докладчиков (RU)
+            .icon-link
+              .icon
+                img alt="pdf" src="images/pdf.png" 
+              .link
+                a href="for-speakers.pdf" target="_blank"  For speakers (EN)
+            .icon-link
+              .icon
+                img alt="pdf" src="images/pdf.png" 
+              .dropdown
+                button#dropdownMenu1.btn.btn-default.dropdown-toggle aria-expanded="true" data-toggle="dropdown" type="button"  Для спонсоров
+                ul.dropdown-menu aria-labelledby="dropdownMenu1" role="menu" 
+                  li role="presentation" 
+                    a href="for-our-sponsors.pdf" role="menuitem" tabindex="-1" target="_blank"  Спонсорам из Ульяновска
+                  li role="presentation" 
+                    a href="for-sponsors.pdf" role="menuitem" tabindex="-1" target="_blank"  Спонсорам из других регионов
+      .row.video
+        .col-xs-12.col-md-8.col-md-offset-2
+          button#open-video.btn.btn-default Видео: «Стачка 2013: Как это было?»
+          #collapseExample.video.embed-responsive.embed-responsive-16by9
+            iframe.embed-responsive-item src="https://www.youtube.com/embed/bt-Xy0F0Fds" 
+      .row.orgs
+        .col-xs-12.col-md-8.col-md-offset-2
+          h1 Организаторы
+          ul
+            li
+              a href="http://itc73.ru/" target="_blank" 
+                img alt="Org" src="images/org1.jpg" /
+            li
+              a href="http://mstagency.ru/" target="_blank" 
+                img alt="Org" src="images/org2.jpg" /
+            li
+              a href="http://www.simtech.ru/" target="_blank" 
+                img alt="Org" src="images/org3.jpg" /
+            li
+              a href="#kaydzen" target="_blank" 
+                img alt="Org" src="images/org4.jpg" /
+            li
+              a href="http://www.simbirsoft.com/ruru/" target="_blank" 
+                img alt="Org" src="images/org5.jpg" /
+            li
+              a href="http://php73.ru/" target="_blank" 
+                img alt="Org" src="images/org6.jpg" /
+            li
+              a href="http://itmcompany.ru/" target="_blank" 
+                img alt="Org" src="images/org7.jpg" /
+            li
+              a href="http://creater.ru/" target="_blank" 
+                img alt="Org" src="images/org8.jpg" /
+            li
+              a href="https://platidoma.ru/" target="_blank" 
+                img alt="Org" src="images/org9.jpg" /
+            li
+              a href="http://interra-group.ru/" target="_blank" 
+                img alt="Org" src="images/org10.jpg" /
+      .row.footer
+        nav.navbar.navbar-default.navbar-static-bottom
+          .container
+            .navbar-header
+              button.navbar-toggle.collapsed data-target="#bs-example-navbar-collapse-2" data-toggle="collapse" type="button" 
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              span © Стачка 2014
+            #bs-example-navbar-collapse-2.navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li
+                  a href="mailto:info@nastachku.ru"  info@nastachku.ru
+              ul.nav.navbar-nav.navbar-right.hidden-xs
+                li Поделиться с друзьями:
+                li
+                  a href="www.facebook.com/nastachku" target="_blank"  f
+                li
+                  a href="https://twitter.com/it73ru" target="_blank"  t
+                li
+                  a href="http://vk.com/nastachku" target="_blank"  В
+                li
+                  a href="#google-plus" target="_blank"  g+
+    
+    / jQuery
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+    / YaMaps
+    script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    / Bootstrap
+    script(src="js/bootstrap.min.js")
+    / Costume compiled js
+    script(src="js/compiled.min.js")
