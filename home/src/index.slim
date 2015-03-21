@@ -1,72 +1,72 @@
 doctype 5
-html(lang="en")
+html lang="en"
 	head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
     title Стачка
     / Bootstrap
-    link(href="css/bootstrap.min.css" rel="stylesheet")
+    link href="css/bootstrap.min.css" rel="stylesheet"
     / Costume style
-    link(href="css/styles.css" rel="stylesheet")
+    link href="css/styles.css" rel="stylesheet"
     / IE
     /[if lt IE 9]
-      script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
-      script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
-  body
+      script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"
+      script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
+	body
     nav.navbar.navbar-default.navbar-static-top.header
       .container
         .navbar-header
-          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
-            span(class="sr-only") Toggle navigation
+          button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+            span class="sr-only" Toggle navigation
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          img.img-responsive(src="images/logo-min.png" alt="Logo-min" id="logo-min")
-        .navbar-collapse.collapse(id="bs-example-navbar-collapse-1")
+          img.img-responsive src="images/logo-min.png" alt="Logo-min" id="logo-min"
+        .navbar-collapse.collapse id="bs-example-navbar-collapse-1"
           ul.nav.navbar-nav
             li
-              a(href="http://2012.nastachku.ru/" target="_blank") 2012
+              a href="http://2012.nastachku.ru/" target="_blank" 2012
             li
-              a(href="http://2013.nastachku.ru/" target="_blank") 2013
+              a href="http://2013.nastachku.ru/" target="_blank" 2013
           ul.nav.navbar-nav.navbar-right
             li.visible-xs-block
-              a(href="#" data-toggle="modal" data-target="#myModal")
+              a href="#" data-toggle="modal" data-target="#myModal"
                 | Зарегистрироваться
             li
-              a(href="www.facebook.com/nastachku" target="_blank") f
+              a href="www.facebook.com/nastachku" target="_blank" f
             li
-              a(href="https://twitter.com/it73ru" target="_blank") t
+              a href="https://twitter.com/it73ru" target="_blank" t
             li
-              a(href="http://vk.com/nastachku" target="_blank") В
+              a href="http://vk.com/nastachku" target="_blank" В
     .container.hidden-xs.middle
       .row
         .col-xs-9
-          img.img-responsive(src="images/logo.png" alt="Logo")
+          img.img-responsive src="images/logo.png" alt="Logo"
         .col-xs-3
-          button.btn.btn-default(type="button" data-toggle="modal" data-target="#myModal") Зарегистрироваться
+          button.btn.btn-default type="button" data-toggle="modal" data-target="#myModal" Зарегистрироваться
     / Modal frame
-    .modal.fade#myModal(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+    .modal.fade#myModal tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
       .modal-dialog
         .modal-content
           .modal-header
-            button.close(type="button" data-dismiss="modal" aria-label="Close")
-              span(aria-hidden="true") &times;
+            button.close type="button" data-dismiss="modal" aria-label="Close"
+              span aria-hidden="true" &times;
             h4.modal-title#myModalLabel Регистрация
           .modal-body
             form.form-horizontal#myForm
-              input.form-control#inputName(type="name" placeholder="Мое имя" min="1" maxlength="64" required)
-              input.form-control#inputSurname(type="text" placeholder="Фамилия" min="1" maxlength="64" required)
-              input.form-control#inputEmail(type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required)
-              input.form-control#inputPass1(type="password" placeholder="Придумайте пароль" maxlength="32" required)
-              input.form-control#inputPass2(type="password" placeholder="Повторите пароль" maxlength="32" required)
+              input.form-control#inputName type="name" placeholder="Мое имя" min="1" maxlength="64" required=""
+              input.form-control#inputSurname type="text" placeholder="Фамилия" min="1" maxlength="64" required=""
+              input.form-control#inputEmail type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required=""
+              input.form-control#inputPass1 type="password" placeholder="Придумайте пароль" maxlength="32" required=""
+              input.form-control#inputPass2 type="password" placeholder="Повторите пароль" maxlength="32" required=""
               p
                 | Нажимая на кнопку «Зарегистрироваться», вы подтверждаете свое согласия с условиями предоставления услуг (пользовательское соглашение)
-              button.btn.btn-primary(type="submit") Зарегистрироваться
+              button.btn.btn-primary type="submit" Зарегистрироваться
           .modal-footer
             p
               | Уже зарегистрировались?
-            a(href="#")
+            a href="#"
               | Войти в кабинет
     .container-fluid
       .row.map
@@ -173,10 +173,10 @@ html(lang="en")
                   a href="#google-plus" target="_blank"  g+
     
     / jQuery
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
     / YaMaps
-    script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"
     / Bootstrap
-    script(src="js/bootstrap.min.js")
+    script src="js/bootstrap.min.js"
     / Costume compiled js
-    script(src="js/compiled.min.js")
+    script src="js/compiled.min.js"
