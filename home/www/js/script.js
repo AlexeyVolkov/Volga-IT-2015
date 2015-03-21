@@ -4,10 +4,10 @@ $( document ).ready(function() {
     	$(".video").fadeIn('slow');
     });
 
-    $('#myForm').submit(function () {
+    /*$('#myForm').submit(function () {
     	$('#myModal').modal('hide');
   		$("#myModal2").modal('show');
-	});
+	});*/
  
  	$("#myModal").on('show.bs.modal', function() {
  		$(".header, .middle, .map, .about, .video, .orgs, .footer").addClass('blur');
@@ -16,4 +16,5 @@ $( document ).ready(function() {
  		$(".header, .middle, .map, .about, .video, .orgs, .footer").removeClass('blur');
  	});
 
+ 	$("#myModal form").validate();
 });
