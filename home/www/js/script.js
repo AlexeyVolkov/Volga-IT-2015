@@ -13,6 +13,34 @@ $( document ).ready(function() {
 
  	$("#myModal form").validate({
  		debug: true,
+ 		rules: {
+ 			inputName:{
+ 				required: true,
+ 				nowhitespace: true,
+ 				letterswithbasicpunc: true,
+ 				range: [1, 64]
+ 			},
+ 			inputSurname:{
+ 				required: true,
+ 				nowhitespace: true,
+ 				letterswithbasicpunc: true,
+ 				range: [1, 64]
+ 			},
+ 			inputEmail:{
+ 				required: true,
+ 				range: [5, 128],
+ 				email: true
+ 			},
+ 			inputPass1:{
+ 				required: true,
+ 				range: [8, 32]
+ 			},
+ 			inputPass2:{
+ 				required: true,
+ 				range: [8, 32],
+ 				equalTo: "#inputPass1"
+ 			}
+ 		},
  		submitHandler: function(form){
  			$('#myModal').modal('hide');
   			$("#myModal2").modal('show');
