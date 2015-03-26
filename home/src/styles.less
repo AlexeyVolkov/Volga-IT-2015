@@ -135,22 +135,28 @@ body{
 				}
 		}
 		.modal-body{
-			    padding-left: 30px;
+			  padding-left: 30px;
 
 				input{
+					position: relative;
 					@height: 50px;
+					margin-bottom: -1px;
 					width: 100%;
 					height: @height;
 					line-height: @height;
+					z-index: 10;
 
-					border-radius: 2px !important;
+					border-radius: 0;
 					border: 1px solid #e2e2e2;
-					border-top: none;
 					font-size: 16px;
 					box-shadow: none;
 
 					&:first-child{
 						border-top: 1px solid #e2e2e2;
+						.border-top-radius(2px) !important;
+					}
+					&:last-child{
+						.border-bottom-radius(2px) !important
 					}
 				}
 				p{
@@ -183,6 +189,11 @@ body{
 						border-color: darken(#ef9875, 10%)!important;
 					}
 				}
+			input.error{
+				border-color: red;
+				#gradient.horizontal(white, lighten(red,30%));
+				z-index: 20;
+			}
 		}
 		.modal-footer{
 				line-height: normal;

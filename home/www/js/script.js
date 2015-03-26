@@ -10,8 +10,11 @@ $( document ).ready(function() {
  	$("#myModal").on('hide.bs.modal', function() {
  		$(".header, .middle, .map, .about, .video, .orgs, .footer").removeClass('blur');
  	});
-
- 	$("#myModal form").validate({
+ 	/*
+		http://www.w3schools.com/tags/att_input_pattern.asp
+		http://jsfiddle.net/Daniel_Hug/wDx62/
+ 	*/
+ 	/*$("#myModal form").validate({
  		debug: true,
  		rules: {
  			inputName:{
@@ -45,5 +48,5 @@ $( document ).ready(function() {
  			$('#myModal').modal('hide');
   			$("#myModal2").modal('show');
  		}
- 	});
+ 	});*/
 });

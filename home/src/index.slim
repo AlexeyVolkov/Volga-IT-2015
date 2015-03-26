@@ -55,11 +55,11 @@ html lang="en"
             h4.modal-title#myModalLabel Регистрация
           .modal-body
             form.form-horizontal#myForm
-              input.form-control#inputName type="text" placeholder="Мое имя" min="1" maxlength="64" required="" name="inputName"
-              input.form-control#inputSurname type="text" placeholder="Фамилия" min="1" maxlength="64" required="" name="inputSurname"
-              input.form-control#inputEmail type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required="" name="inputEmail"
-              input.form-control#inputPass1 type="password" placeholder="Придумайте пароль" maxlength="32" required="" name="inputPass1"
-              input.form-control#inputPass2 type="password" placeholder="Повторите пароль" maxlength="32" required="" name="inputPass2"
+              input.form-control#inputName type="text" placeholder="Мое имя" min="1" maxlength="64" required="" pattern="^[^\S]$" title="Введи то, что я требую!"
+              input.form-control.error#inputSurname type="text" placeholder="Фамилия" min="1" maxlength="64" required=""
+              input.form-control#inputEmail type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required="" pattern="^\S+@(([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6})$"
+              input.form-control#inputPass1 type="password" placeholder="Придумайте пароль" maxlength="32" required=""
+              input.form-control#inputPass2 type="password" placeholder="Повторите пароль" maxlength="32" required=""
               p
                 | Нажимая на кнопку «Зарегистрироваться», вы подтверждаете свое согласия с условиями предоставления услуг (пользовательское соглашение)
               button.btn.btn-primary type="submit" Зарегистрироваться
