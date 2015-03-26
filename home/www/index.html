@@ -64,7 +64,7 @@
         </div>
         <div class="modal-body">
           <form class="form-horizontal" id="myForm">
-            <input class="form-control" id="inputName" maxlength="64" min="1" pattern="^[^\S]$" placeholder="Мое имя" required="" title="Введи то, что я требую!" type="text" /><input class="form-control error" id="inputSurname" maxlength="64" min="1" placeholder="Фамилия" required="" type="text" /><input class="form-control" id="inputEmail" maxlength="128" pattern="^\S+@(([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6})$" placeholder="Ваш адрес электронной почты" required="" type="email" /><input class="form-control" id="inputPass1" maxlength="32" placeholder="Придумайте пароль" required="" type="password" /><input class="form-control" id="inputPass2" maxlength="32" placeholder="Повторите пароль" required="" type="password" />
+            <input class="form-control" id="inputName" maxlength="64" min="1" pattern="([а-яА-ЯёЁa-zA-Z0-9]{1,64}|[^\s-])" placeholder="Мое имя" required="" title="Имя должно содержать буквы латинског" type="text" /><input class="form-control error" id="inputSurname" maxlength="64" min="1" pattern="([а-яА-ЯёЁa-zA-Z0-9]{1,64}|[^\s-])" placeholder="Фамилия" required="" type="text" /><input class="form-control" id="inputEmail" maxlength="128" placeholder="Ваш адрес электронной почты" required="" type="email" /><input class="form-control" id="inputPass1" maxlength="32" pattern="(?=.*\d+)(?=.*\W+)(?=.*[a-z]?)(?=.*[A-Z]?)(?=.*[а-яё]?)(?=.*[А-ЯЁ]?).{8,32}" placeholder="Придумайте пароль" required="" title="Пароль обязательно должен содержать: минимум 1 заглавную букву, спецсимвол или цифру" type="" /><input class="form-control" id="inputPass2" maxlength="32" pattern="(?=.*\d+)(?=.*\W+)(?=.*[a-z]?)(?=.*[A-Z]?)(?=.*[а-яё]?)(?=.*[А-ЯЁ]?).{8,32}" placeholder="Повторите пароль" required="" title="Пароль обязательно должен содержать: минимум 1 заглавную букву, спецсимвол или цифру" type="" />
             <p>
               Нажимая на кнопку «Зарегистрироваться», вы подтверждаете свое согласия с условиями предоставления услуг (пользовательское соглашение)
             </p>
@@ -76,6 +76,23 @@
             Уже зарегистрировались?
           </p>
           <a href="#">Войти в кабинет</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div aria-hidden="true" aria-labelledby="myModalLabel2" class="modal fade" id="myModal2" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-label="Close" class="close" data-dismiss="modal" type="button">>
+            span aria-hidden="true" &times;</button>
+          <h4 class="modal-title" id="idModalLabel2"></h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            Все так и вам удалось! Примите наши искринние поздравления! Теперь нажимаем "OK"!
+          </p>
+          <button class="btn btn-primary" data-dismiss="modal" type="button">ok</button>
         </div>
       </div>
     </div>

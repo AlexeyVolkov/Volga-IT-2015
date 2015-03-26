@@ -55,11 +55,11 @@ html lang="en"
             h4.modal-title#myModalLabel Регистрация
           .modal-body
             form.form-horizontal#myForm
-              input.form-control#inputName type="text" placeholder="Мое имя" min="1" maxlength="64" required="" pattern="^[^\S]$" title="Введи то, что я требую!"
-              input.form-control.error#inputSurname type="text" placeholder="Фамилия" min="1" maxlength="64" required=""
-              input.form-control#inputEmail type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required="" pattern="^\S+@(([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6})$"
-              input.form-control#inputPass1 type="password" placeholder="Придумайте пароль" maxlength="32" required=""
-              input.form-control#inputPass2 type="password" placeholder="Повторите пароль" maxlength="32" required=""
+              input.form-control#inputName type="text" placeholder="Мое имя" min="1" maxlength="64" required="" pattern="([а-яА-ЯёЁa-zA-Z0-9]{1,64}|[^\s-])" title="Имя должно содержать буквы латинског"
+              input.form-control.error#inputSurname type="text" placeholder="Фамилия" min="1" maxlength="64" required="" pattern="([а-яА-ЯёЁa-zA-Z0-9]{1,64}|[^\s-])"
+              input.form-control#inputEmail type="email" placeholder="Ваш адрес электронной почты" maxlength="128" required=""
+              input.form-control#inputPass1 type="" placeholder="Придумайте пароль" maxlength="32" required="" pattern="(?=.*\d+)(?=.*\W+)(?=.*[a-z]?)(?=.*[A-Z]?)(?=.*[а-яё]?)(?=.*[А-ЯЁ]?).{8,32}" title="Пароль обязательно должен содержать: минимум 1 заглавную букву, спецсимвол или цифру"
+              input.form-control#inputPass2 type="" placeholder="Повторите пароль" maxlength="32" required="" pattern="(?=.*\d+)(?=.*\W+)(?=.*[a-z]?)(?=.*[A-Z]?)(?=.*[а-яё]?)(?=.*[А-ЯЁ]?).{8,32}" title="Пароль обязательно должен содержать: минимум 1 заглавную букву, спецсимвол или цифру"
               p
                 | Нажимая на кнопку «Зарегистрироваться», вы подтверждаете свое согласия с условиями предоставления услуг (пользовательское соглашение)
               button.btn.btn-primary type="submit" Зарегистрироваться
@@ -68,6 +68,18 @@ html lang="en"
               | Уже зарегистрировались?
             a href="#"
               | Войти в кабинет
+    / Modal Success
+    .modal.fade#myModal2 tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true"
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close type="button" data-dismiss="modal" aria-label="Close">
+              span aria-hidden="true" &times;
+            h4.modal-title#idModalLabel2
+          div.modal-body
+            p
+              | Все так и вам удалось! Примите наши искринние поздравления! Теперь нажимаем "OK"!
+            button.btn.btn-primary type="button" data-dismiss="modal" ok
     .container-fluid
       .row.map
         .col-xs-12.col-lg-10.col-lg-offset-1.map-content
